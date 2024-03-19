@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
-        <servlet-name>PageViews</servlet-name>
+        <servlet-name>PageView</servlet-name>
         <servlet-class>controller.PageViewController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Test1</servlet-name>
+        <servlet-class>controller.Test1</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>PageViews</servlet-name>
+        <servlet-name>PageView</servlet-name>
         <url-pattern>/pageview</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class>controller.PageViewListener</listener-class>
+    </listener>
+    <servlet-mapping>
+        <servlet-name>Test1</servlet-name>
+        <url-pattern>/Test1</url-pattern>
     </servlet-mapping>
 </web-app>

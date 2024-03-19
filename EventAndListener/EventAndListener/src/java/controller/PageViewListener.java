@@ -5,10 +5,6 @@
 
 package controller;
 
-/**
- *
- * @author hoang
- */
 import dal.PageViewDBContext;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
@@ -36,7 +32,6 @@ public class PageViewListener implements ServletContextListener, ServletRequestL
             viewCount++;
             PageViewDBContext pDB = new PageViewDBContext();
             pDB.updateViews(viewCount);
-            context.setAttribute("viewCount", viewCount);
         }
     }
 }
