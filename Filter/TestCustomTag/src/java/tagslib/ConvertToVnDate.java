@@ -23,6 +23,7 @@ public class ConvertToVnDate extends SimpleTagSupport {
         JspWriter out = getJspContext().getOut();
 
         try {
+        
             String[] s = value.split("-");
             out.print(String.format("Ngay %s, thang %s, nam %s", s[0], s[1], s[2]));
             
